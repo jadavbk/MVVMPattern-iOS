@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall1" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-fH-QOa">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="BhW-yG-w4f"/>
+                                    <constraint firstAttribute="height" constant="250" id="uer-HR-U5U"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt1-zv-Wg3">
+                                <rect key="frame" x="157" y="615" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="NHr-PD-9fK"/>
+                                    <constraint firstAttribute="height" constant="30" id="sI7-Vd-jFP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
+                                <connections>
+                                    <action selector="clickUpload" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAk-MG-UgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-Qp-cLP">
+                                <rect key="frame" x="157" y="678" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1jF-FX-2tP"/>
+                                    <constraint firstAttribute="height" constant="30" id="9M4-kD-GeO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get image"/>
+                                <connections>
+                                    <action selector="btnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQX-dD-GNW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TyG-fH-QOa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Fu-mU-KY6"/>
+                            <constraint firstItem="TyG-fH-QOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3M6-t3-oak"/>
+                            <constraint firstItem="Lt1-zv-Wg3" firstAttribute="top" secondItem="TyG-fH-QOa" secondAttribute="bottom" constant="42" id="DmW-ej-1X4"/>
+                            <constraint firstItem="Lt1-zv-Wg3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LAt-FL-3Q9"/>
+                            <constraint firstItem="hGu-Qp-cLP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Otw-4Q-HDa"/>
+                            <constraint firstItem="hGu-Qp-cLP" firstAttribute="top" secondItem="Lt1-zv-Wg3" secondAttribute="bottom" constant="33" id="eyT-oA-cg8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgUser" destination="TyG-fH-QOa" id="x95-FV-TUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wall1" width="2195" height="1474"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
